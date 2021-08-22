@@ -1,9 +1,9 @@
 package cdn
 
 import (
+	"Komentory/cdn/pkg/utils"
 	"context"
 	"fmt"
-	"komentory/api_server/pkg/utils"
 	"os"
 	"path/filepath"
 
