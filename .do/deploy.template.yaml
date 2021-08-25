@@ -5,3 +5,33 @@ spec:
       git:
         branch: main
         repo_clone_url: https://github.com/Komentory/do-spaces-microservice.git
+      envs:
+        # Secret variables:
+        - key: JWT_SECRET_KEY
+          value: "salt-for-secret-key-here"
+          type: SECRET
+        - key: DO_SPACES_ACCESS_KEY_ID
+          value: "spaces-access-key-id-here"
+          type: SECRET
+        - key: DO_SPACES_SECRET_ACCESS_KEY
+          value: "spaces-secret-access-key-here"
+          type: SECRET
+        # Public variables:
+        - key: STAGE_STATUS
+          value: "prod"
+        - key: SERVER_HOST
+          value: "0.0.0.0"
+        - key: SERVER_PORT
+          value: "5000"
+        - key: SERVER_READ_TIMEOUT
+          value: "60"
+        - key: JWT_SECRET_KEY_EXPIRE_MINUTES_COUNT
+          value: "15"
+        - key: CDN_PUBLIC_URL
+          value: "https://cdn.example.com"
+        - key: DO_SPACES_ENDPOINT
+          value: "spaces-endpoint"
+        - key: DO_SPACES_BUCKET_NAME
+          value: "my-bucket-name"
+        - key: DO_SPACES_UPLOADS_FOLDER_NAME
+          value: "my-upload-folder-name"
