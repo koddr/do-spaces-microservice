@@ -18,9 +18,9 @@ After that, please fill all of the following environment variables (all variable
 
 ![Screenshot](https://user-images.githubusercontent.com/11155743/130789680-e0430ed3-5667-422f-940d-3f6fffd0b539.png)
 
-Choose name of your web service (which will be displayed in the Spaces URL, like `https://your-web-service.ondigitalocean.app`), region and a **Basic plan** (_$5/mo_) for start.
+Choose name of your web service (which will be displayed in the Spaces URL, like `https://your-web-service.ondigitalocean.app`), region and a **Basic plan** (_$5/mo_) for start. Click to **Launch Basic App** and get our congratulations. 
 
-Click to **Launch Basic App** and get our congratulations. You have successfully deployed microservice to DigitalOcean! 🎉
+You have successfully deployed microservice to DigitalOcean! 🎉
 
 ## 📖 Next steps
 
