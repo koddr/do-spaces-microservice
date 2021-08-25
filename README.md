@@ -1,3 +1,33 @@
-# Microservice for CRUD objects on DigitalOcean Spaces CDN
+# Microservice for upload, remove and list objects to/from your DigitalOcean Spaces
+
+Production-ready, zero configuration, working out of the box!
+
+## ⚡️ Quick start
+
+Sign in to your DigitalOcean account.
+
+> **Don't have an account yet?** Join DigitalOcean at our [referral link](https://m.do.co/c/b41859fa9b6e)! Your profit is **$100** and we get $25. This will allow you **not** to think about paying for Spaces for 10 months, and we will send the money received to support the [Komentory](https://komentory.com/) project servers.
+
+Next, create your own [Spaces](https://docs.digitalocean.com/products/spaces/quickstart/#create-a-space) and upload folder with permissions. Go to the `Spaces access keys` section at the [Manage Keys](https://cloud.digitalocean.com/account/api/tokens) page and create a new keys. _Save them to a notepad for later!_
+
+OK, now we're ready to click this button:
 
 [![Deploy do-spaces-microservice to DO](https://www.deploytodo.com/do-btn-blue-ghost.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/Komentory/do-spaces-microservice/tree/main)
+
+After that, please fill all of the following environment variables (all variables are **required**):
+
+![Screenshot](https://user-images.githubusercontent.com/11155743/130789680-e0430ed3-5667-422f-940d-3f6fffd0b539.png)
+
+Congratulations! You have successfully deployed microservice.
+
+## 📖 Next steps
+
+Open your favorite REST API tool and send requests:
+
+- **GET** `/api/v1/list` (get all files from upload folder)
+- **PUT** `/api/v1/upload/image` (put image to upload folder)
+- **DELETE** `/api/v1/remove` (delete file from upload folder by object key)
+
+## ⚠️ License
+
+`do-spaces-microservice` is free and open-source software licensed under the [Apache 2.0 License](https://github.com/Komentory/do-spaces-microservice/blob/master/LICENSE).
