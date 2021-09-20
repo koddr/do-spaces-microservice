@@ -1,5 +1,7 @@
 # 🧺 Microservice for DigitalOcean Spaces 
 
+<a href="https://github.com/koddr/do-spaces-microservice/releases" target="_blank"><img src="https://img.shields.io/badge/version-v0.1.0-blue?style=for-the-badge&logo=none" alt="do-spaces-microservice version" /></a>&nbsp;<a href="https://pkg.go.dev/github.com/koddr/do-spaces-microservice/?tab=doc" target="_blank"><img src="https://img.shields.io/badge/Go-1.17+-00ADD8?style=for-the-badge&logo=go" alt="go version" /></a>&nbsp;<a href="https://goreportcard.com/report/github.com/koddr/do-spaces-microservice" target="_blank"><img src="https://img.shields.io/badge/Go_report-A+-success?style=for-the-badge&logo=none" alt="go report" /></a>&nbsp;<img src="https://img.shields.io/badge/license-apache_2.0-red?style=for-the-badge&logo=none" alt="license" />
+
 Upload, remove and list objects to/from your CDN. Production-ready, zero configuration, working out of the box!
 
 ## ⚡️ Quick start
