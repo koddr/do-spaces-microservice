@@ -4,7 +4,7 @@ spec:
     - name: web
       git:
         branch: main
-        repo_clone_url: https://github.com/Komentory/do-spaces-microservice.git
+        repo_clone_url: https://github.com/koddr/do-spaces-microservice.git
       envs:
         # Secret variables:
         - key: JWT_SECRET_KEY
@@ -24,9 +24,15 @@ spec:
         - key: SERVER_PORT
           value: "5000"
         - key: SERVER_READ_TIMEOUT
-          value: "60"
+          value: "5"
+        - key: SERVER_WRITE_TIMEOUT
+          value: "10"
+        - key: SERVER_IDLE_TIMEOUT
+          value: "120"
         - key: JWT_SECRET_KEY_EXPIRE_MINUTES_COUNT
           value: "15"
+        - key: CORS_ALLOW_ORIGINS
+          value: "http://localhost:3000"
         - key: CDN_PUBLIC_URL
           value: "https://cdn.example.com"
         - key: DO_SPACES_ENDPOINT
