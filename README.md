@@ -6,7 +6,7 @@ Upload, remove and list objects to/from your CDN. Production-ready, zero configu
 
 Sign in to your DigitalOcean account.
 
-> **Don't have an account yet?** Join DigitalOcean at our [referral link](https://m.do.co/c/b41859fa9b6e)! Your profit is **$100** and we get $25. This will allow you **not** to think about paying for Spaces for 10 months, and we will send the money received to support the [Komentory](https://komentory.com/) project servers.
+> **Don't have an account yet?** Join DigitalOcean at our [referral link](https://m.do.co/c/b41859fa9b6e)! Your profit is **$100** and we get $25. This will allow you **not** to think about paying for Spaces for 10 months, and we will send the money received to support the [Komentory](https://github.com/Komentory) project servers.
 
 Next, create your own [Spaces](https://docs.digitalocean.com/products/spaces/quickstart/#create-a-space) and upload folder with permissions. Go to the `Spaces access keys` section at the [Manage Keys](https://cloud.digitalocean.com/account/api/tokens) page and create a new keys. _Save them to a notepad for later!_
 
