@@ -1,6 +1,6 @@
-# Microservice for upload, remove and list objects to/from your DigitalOcean Spaces
+# 🧺 Microservice for DigitalOcean Spaces 
 
-Production-ready, zero configuration, working out of the box!
+Upload, remove and list objects to/from your CDN. Production-ready, zero configuration, working out of the box!
 
 ## ⚡️ Quick start
 
