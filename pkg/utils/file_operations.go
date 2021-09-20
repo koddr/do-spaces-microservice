@@ -17,58 +17,77 @@ import (
 
 // GetLocalFileInfo func for get local file's info (Content-Type, extension, size, etc).
 func GetLocalFileInfo(pathToFile, fileType string) (*models.LocalFileInfo, error) {
-	//
+	// Get size of local file.
 	fileSize, err := GetFileSize(pathToFile)
 	if err != nil {
 		// Throw error with message.
 		return nil, err
 	}
 
-	//
+	// Checking environment variable for max file size.
 	maxFileSize, err := strconv.ParseInt(os.Getenv("MAX_UPLOAD_FILE_SIZE"), 10, 64)
 	if err != nil {
 		// Throw error with message.
 		return nil, err
 	}
 
-	//
+	// Checking, if max file size is not reached.
 	if fileSize > maxFileSize {
 		// Throw error with message.
 		return nil, fmt.Errorf("file is too large for upload")
 	}
 
-	//
+	// Read local file and buffering.
 	buf, err := ioutil.ReadFile(filepath.Clean(pathToFile))
 	if err != nil {
 		// Throw error with message.
 		return nil, err
 	}
 
-	//
+	// Set error messages.
+	errMessageForFileType := fmt.Sprintf("only %s files are supported", fileType)
+	errMessageForDefault := fmt.Sprintf("wrong or unsupported file type to upload (%s)", fileType)
+
+	// Checking content type of the local file.
 	switch fileType {
-	case "image":
-		if !filetype.IsImage(buf) {
+	case "archive":
+		if !filetype.IsArchive(buf) {
 			// Throw error with message.
-			return nil, fmt.Errorf("only images are supported")
+			return nil, fmt.Errorf(errMessageForFileType)
+		}
+	case "audio":
+		if !filetype.IsAudio(buf) {
+			// Throw error with message.
+			return nil, fmt.Errorf(errMessageForFileType)
 		}
 	case "document":
 		if !filetype.IsDocument(buf) {
 			// Throw error with message.
-			return nil, fmt.Errorf("only images are supported")
+			return nil, fmt.Errorf(errMessageForFileType)
+		}
+	case "image":
+		if !filetype.IsImage(buf) {
+			// Throw error with message.
+			return nil, fmt.Errorf(errMessageForFileType)
+		}
+	case "video":
+		if !filetype.IsVideo(buf) {
+			// Throw error with message.
+			return nil, fmt.Errorf(errMessageForFileType)
 		}
 	default:
 		// Throw error with message.
-		return nil, fmt.Errorf("wrong or unsupported file type")
+		return nil, fmt.Errorf(errMessageForDefault)
 	}
 
-	//
+	// Matching file type.
 	kind, err := filetype.Match(buf)
 	if err != nil {
 		// Throw error with message.
 		return nil, err
 	}
 
-	//
+	// Checking file type for unknown type.
 	if kind == filetype.Unknown {
 		// Throw error with message.
 		return nil, fmt.Errorf("unknown file type")

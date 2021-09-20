@@ -1,8 +1,6 @@
 package utils
 
 import (
-	"strconv"
-
 	"github.com/go-playground/validator/v10"
 	"github.com/google/uuid"
 )
@@ -16,15 +14,6 @@ func NewValidator() *validator.Validate {
 	_ = validate.RegisterValidation("uuid", func(fl validator.FieldLevel) bool {
 		field := fl.Field().String()
 		if _, err := uuid.Parse(field); err != nil {
-			return true
-		}
-		return false
-	})
-
-	// Custom validation for int fields.
-	_ = validate.RegisterValidation("int", func(fl validator.FieldLevel) bool {
-		field := fl.Field().String()
-		if _, err := strconv.Atoi(field); err != nil {
 			return true
 		}
 		return false

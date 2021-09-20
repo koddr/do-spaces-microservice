@@ -9,7 +9,7 @@ import (
 
 // PrivateRoutes func for describe group of private routes.
 func PrivateRoutes(a *fiber.App) {
-	// Create routes group.
+	// Create JWT protected routes group.
 	route := a.Group("/v1", middleware.JWTProtected())
 
 	// Routes for GET method:

@@ -11,9 +11,8 @@ import (
 
 // TokenMetadata struct to describe metadata in JWT.
 type TokenMetaData struct {
-	UserID      uuid.UUID
-	Credentials []string
-	Expires     int64
+	UserID uuid.UUID
+	Expire int64
 }
 
 // ExtractTokenMetaData func to extract metadata from JWT.
@@ -33,18 +32,11 @@ func ExtractTokenMetaData(c *fiber.Ctx) (*TokenMetaData, error) {
 		}
 
 		// Expires time.
-		expires := int64(claims["expires"].(float64))
-
-		// User credentials.
-		credentials := []string{}
-		for _, credential := range claims["credentials"].([]interface{}) {
-			credentials = append(credentials, credential.(string))
-		}
+		expire := int64(claims["expire"].(float64))
 
 		return &TokenMetaData{
-			UserID:      userID,
-			Credentials: credentials,
-			Expires:     expires,
+			UserID: userID,
+			Expire: expire,
 		}, nil
 	}
 

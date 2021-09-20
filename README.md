@@ -27,8 +27,12 @@ You have successfully deployed microservice to DigitalOcean! 🎉
 Open your favorite REST API tool and send requests:
 
 - **GET** `/v1/list` (get all objects from upload folder)
+  - Request body (JSON): none
 - **PUT** `/v1/upload` (put object to upload folder)
+  - Request body (JSON): `{ "type": "<TYPE>", "path": "<PATH/TO/FILE>" }`
+  - Supported types: `archive`, `audio`, `document`, `image`, `video`
 - **DELETE** `/v1/remove` (delete object from upload folder by object key)
+  - Request body (JSON): `{ "key": "<OBJECT_KEY>", "version_id": "<ID>" }`
 
 ## ⚠️ License
 

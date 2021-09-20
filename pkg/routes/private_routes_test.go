@@ -28,7 +28,7 @@ func TestPrivateRoutes(t *testing.T) {
 	}{
 		{
 			description:   "delete object from CDN without JWT and body",
-			route:         "/remove",
+			route:         "/v1/remove",
 			method:        "DELETE",
 			tokenString:   "",
 			body:          nil,

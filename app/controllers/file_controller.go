@@ -82,7 +82,6 @@ func GetObjectsListFromCDN(c *fiber.Ctx) error {
 	// Return status 200 OK.
 	return c.JSON(fiber.Map{
 		"error":   false,
-		"msg":     nil,
 		"count":   len(objects),
 		"objects": objects,
 	})
@@ -138,7 +137,6 @@ func PutObjectToCDN(c *fiber.Ctx) error {
 	// Return status 201 created.
 	return c.Status(fiber.StatusCreated).JSON(fiber.Map{
 		"error": false,
-		"msg":   nil,
 		"info": fiber.Map{
 			"key":        uploadObjectInfo.Key,
 			"etag":       uploadObjectInfo.ETag,
