@@ -18,7 +18,7 @@ After that, please fill all of the following environment variables (all variable
 
 ![Screenshot](https://user-images.githubusercontent.com/11155743/130789680-e0430ed3-5667-422f-940d-3f6fffd0b539.png)
 
-Choose name of your web service (which will be displayed in the Spaces URL, like `https://your-web-service.ondigitalocean.app`), region and a **Basic plan** (_$5/mo_) for start. Click to **Launch Basic App** and get our congratulations. 
+Choose name of your web service (which will be displayed in the Spaces URL, like `https://your-web-service.ondigitalocean.app`), region and a **Basic plan** (_$5/mo_) for start. Click to **Launch Basic App** and get our congratulations.
 
 You have successfully deployed microservice to DigitalOcean! 🎉
 
@@ -26,9 +26,9 @@ You have successfully deployed microservice to DigitalOcean! 🎉
 
 Open your favorite REST API tool and send requests:
 
-- **GET** `/api/v1/list` (get all files from upload folder)
-- **PUT** `/api/v1/upload/image` (put image to upload folder)
-- **DELETE** `/api/v1/remove` (delete file from upload folder by object key)
+- **GET** `/v1/list` (get all objects from upload folder)
+- **PUT** `/v1/upload` (put object to upload folder)
+- **DELETE** `/v1/remove` (delete object from upload folder by object key)
 
 ## ⚠️ License
 

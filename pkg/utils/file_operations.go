@@ -1,7 +1,6 @@
 package utils
 
 import (
-	"Komentory/cdn/app/models"
 	"crypto/sha256"
 	"encoding/hex"
 	"fmt"
@@ -10,6 +9,8 @@ import (
 	"path/filepath"
 	"strconv"
 	"time"
+
+	"github.com/koddr/do-spaces-microservice/app/models"
 
 	"github.com/h2non/filetype"
 )

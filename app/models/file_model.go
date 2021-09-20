@@ -8,14 +8,15 @@ type FileFromCDN struct {
 	URL       string `json:"url"`
 }
 
-// LocalFileInfo struct to describe info of file.
+// LocalFile struct to describe file in system.
+type LocalFile struct {
+	Path string `json:"path"`
+	Type string `json:"type"`
+}
+
+// LocalFileInfo struct to describe info of the local file.
 type LocalFileInfo struct {
 	ContentType string `json:"content_type"`
 	Extension   string `json:"extension"`
 	Size        int64  `json:"size"`
-}
-
-// LocalFilePath struct to describe file path in system.
-type LocalFilePath struct {
-	Path string `json:"path"`
 }

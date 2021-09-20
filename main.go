@@ -1,11 +1,12 @@
 package main
 
 import (
-	"Komentory/cdn/pkg/configs"
-	"Komentory/cdn/pkg/middleware"
-	"Komentory/cdn/pkg/routes"
-	"Komentory/cdn/pkg/utils"
 	"os"
+
+	"github.com/koddr/do-spaces-microservice/pkg/configs"
+	"github.com/koddr/do-spaces-microservice/pkg/middleware"
+	"github.com/koddr/do-spaces-microservice/pkg/routes"
+	"github.com/koddr/do-spaces-microservice/pkg/utils"
 
 	"github.com/gofiber/fiber/v2"
 

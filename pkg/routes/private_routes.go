@@ -1,8 +1,8 @@
 package routes
 
 import (
-	"Komentory/cdn/app/controllers"
-	"Komentory/cdn/pkg/middleware"
+	"github.com/koddr/do-spaces-microservice/app/controllers"
+	"github.com/koddr/do-spaces-microservice/pkg/middleware"
 
 	"github.com/gofiber/fiber/v2"
 )
@@ -10,14 +10,14 @@ import (
 // PrivateRoutes func for describe group of private routes.
 func PrivateRoutes(a *fiber.App) {
 	// Create routes group.
-	route := a.Group("/api/v1")
+	route := a.Group("/v1", middleware.JWTProtected())
 
 	// Routes for GET method:
-	route.Get("/list", middleware.JWTProtected(), controllers.GetFileListFromCDN) // get file list from CDN
+	route.Get("/list", controllers.GetObjectsListFromCDN) // get file list from CDN
 
 	// Routes for PUT method:
-	route.Put("/upload/image", middleware.JWTProtected(), controllers.PutImageFileToCDN) // upload image file to CDN
+	route.Put("/upload", controllers.PutObjectToCDN) // upload object to CDN
 
 	// Routes for DELETE method:
-	route.Delete("/remove", middleware.JWTProtected(), controllers.RemoveFileFromCDN) // delete one file from CDN
+	route.Delete("/remove", controllers.RemoveObjectFromCDN) // remove object from CDN
 }

@@ -1,9 +1,10 @@
 package utils
 
 import (
-	"Komentory/cdn/pkg/repository"
 	"fmt"
 	"time"
+
+	"github.com/koddr/do-spaces-microservice/pkg/repository"
 
 	"github.com/gofiber/fiber/v2"
 )

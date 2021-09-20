@@ -1,11 +1,12 @@
 package cdn
 
 import (
-	"Komentory/cdn/pkg/utils"
 	"context"
 	"fmt"
 	"os"
 	"path/filepath"
+
+	"github.com/koddr/do-spaces-microservice/pkg/utils"
 
 	"github.com/minio/minio-go/v7"
 	"github.com/minio/minio-go/v7/pkg/credentials"
@@ -55,7 +56,7 @@ func DOSpacesConnection() (*minio.Client, error) {
 }
 
 //
-func UploadFileToCDN(minioClient *minio.Client, pathToFile, fileType, userID string) (minio.UploadInfo, error) {
+func UploadObjectToCDN(minioClient *minio.Client, pathToFile, fileType, userID string) (minio.UploadInfo, error) {
 	// Open the file from system path.
 	file, errOpen := os.Open(filepath.Clean(pathToFile))
 	if errOpen != nil {
