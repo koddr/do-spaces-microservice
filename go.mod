@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	github.com/go-playground/validator/v10 v10.9.0
-	github.com/gofiber/fiber/v2 v2.49.2
+	github.com/gofiber/fiber/v2 v2.50.0
 	github.com/gofiber/jwt/v2 v2.2.7
 	github.com/golang-jwt/jwt/v4 v4.0.0
 	github.com/google/uuid v1.3.1
@@ -37,7 +37,7 @@ require (
 	github.com/rs/xid v1.3.0 // indirect
 	github.com/sirupsen/logrus v1.8.1 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
-	github.com/valyala/fasthttp v1.49.0 // indirect
+	github.com/valyala/fasthttp v1.50.0 // indirect
 	github.com/valyala/tcplisten v1.0.0 // indirect
 	golang.org/x/crypto v0.14.0 // indirect
 	golang.org/x/net v0.17.0 // indirect
