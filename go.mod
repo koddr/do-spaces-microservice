@@ -1,12 +1,13 @@
 module github.com/koddr/do-spaces-microservice
 
 go 1.17
+toolchain go1.24.1
 
 require (
 	github.com/go-playground/validator/v10 v10.9.0
 	github.com/gofiber/fiber/v2 v2.52.5
 	github.com/gofiber/jwt/v2 v2.2.7
-	github.com/golang-jwt/jwt/v4 v4.5.1
+	github.com/golang-jwt/jwt/v4 v4.5.2
 	github.com/google/uuid v1.5.0
 	github.com/h2non/filetype v1.1.1
 	github.com/joho/godotenv v1.3.0
